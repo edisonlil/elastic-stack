@@ -30,8 +30,8 @@ services:
       - elk
     depends_on:
       - elasticsearch
-    #volumes:
-    #  - ./config/kibana:/usr/share/kibana/config
+    volumes:
+      - ./config/kibana:/usr/share/kibana/config
 
 networks:
   elk:
