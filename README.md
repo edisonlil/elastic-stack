@@ -6,9 +6,7 @@ Email: edisonlil@163.com
 
 Elk Version: `7.13`
 
-
-
------
-
-#### elasticsearch 
+```shell script
+docker-compose up -d
+```
 
