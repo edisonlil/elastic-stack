@@ -10,8 +10,8 @@ services:
       - 9300:9300
     environment:
       discovery.type: single-node
-    #volumes:
-    #  - ./config/elasticsearch:/usr/share/elasticsearch/config
+    volumes:
+      - ./config/elasticsearch:/usr/share/elasticsearch/config
   logstash:
     image: docker.elastic.co/logstash/logstash:7.13.1
     container_name: logstash
@@ -30,8 +30,8 @@ services:
       - elk
     depends_on:
       - elasticsearch
-    volumes:
-      - ./config/kibana:/usr/share/kibana/config
+    #volumes:
+    #  - ./config/kibana:/usr/share/kibana/config
 
 networks:
   elk:
